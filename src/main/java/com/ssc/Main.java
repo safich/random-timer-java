@@ -11,14 +11,14 @@ public class Main {
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Нажмите Enter, чтобы сгенерировать случайное время, или введите 'exit' для выхода.");
+        System.out.println("Press Enter, to generate random timing, or type 'exit' to end.");
 
         while (true) {
-            System.out.print("Нажмите Enter для нового времени: ");
+            System.out.print("Press Enter to new timing: ");
             String input = scanner.nextLine();
 
             if (input.equalsIgnoreCase("exit")) {
-                System.out.println("Выход из программы...");
+                System.out.println("Exiting...");
                 break;
             }
 
@@ -29,7 +29,7 @@ public class Main {
             int seconds = randomSeconds % 60;
 
             String randomTime = String.format("%02d:%02d:%02d", hours, minutes, seconds);
-            System.out.println("Случайное время: " + randomTime);
+            System.out.println("Random time: " + randomTime);
         }
         scanner.close();
     }
